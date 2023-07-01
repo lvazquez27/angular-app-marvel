@@ -1,0 +1,10 @@
+<div class="characters-list">
+    <h3>Listado de Characters</h3>
+    <ul>
+      <li style="cursor: pointer;" *ngFor="let character of characters" (click)="openCharacterPopup(character)">
+        {{ character.name }}
+      </li>
+    </ul>
+    <app-character-popup *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="closeCharacterPopup()"></app-character-popup>
+  </div>
+  
